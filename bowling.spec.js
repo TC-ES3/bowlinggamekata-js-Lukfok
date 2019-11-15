@@ -5,8 +5,10 @@ let g;
 beforeEach(() => { g = new Game()});
 
 test('gutter game', () => {
-    for (let i = 0; i < 20; i += 1) {
-        g.roll(0);
+    const pins = 0;
+    const rolls = 20;
+    for (let i = 0; i < rolls; i += 1) {
+        g.roll(pins);
     }
 
     expect(g.score()).toBe(0);
