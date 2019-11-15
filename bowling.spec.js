@@ -7,9 +7,7 @@ beforeEach(() => { g = new Game()});
 test('gutter game', () => {
     const pins = 0;
     const rolls = 20;
-    for (let i = 0; i < rolls; i += 1) {
-        g.roll(pins);
-    }
+    rollMany(rolls, pins);
 
     expect(g.score()).toBe(0);
 });
@@ -21,3 +19,9 @@ test('all ones', () => {
 
     expect(g.score()).toBe(20);
 });
+
+function rollMany(rolls, pins) {
+    for (let i = 0; i < rolls; i += 1) {
+        g.roll(pins);
+    }
+}
