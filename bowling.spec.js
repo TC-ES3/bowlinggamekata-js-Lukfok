@@ -34,3 +34,12 @@ test('one spare', () => {
 
     expect(g.score()).toBe(16);
 });
+
+test('one strike', () => {
+    g.roll(10); // strike
+    g.roll(3);
+    g.roll(4);
+    rollMany(16, 0);
+
+    expect(g.score()).toBe(24);
+});
