@@ -10,6 +10,10 @@ function rollMany(rolls, pins) {
     }
 }
 
+function rollStrike() {
+    g.roll(10);
+}
+
 function rollSpare() {
     g.roll(5);
     g.roll(5);
@@ -36,7 +40,7 @@ test('one spare', () => {
 });
 
 test('one strike', () => {
-    g.roll(10); // strike
+    rollStrike();
     g.roll(3);
     g.roll(4);
     rollMany(16, 0);
