@@ -11,9 +11,7 @@ test('gutter game', () => {
 });
 
 test('all ones', () => {
-    for (let i = 0; i < 20; i += 1) {
-        g.roll(1);
-    }
+    rollMany(20, 1);
 
     expect(g.score()).toBe(20);
 });
