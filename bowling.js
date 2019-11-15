@@ -1,2 +1,4 @@
 // bowling.js
-export default class Game {}
+export default class Game {
+    roll(){}
+}
