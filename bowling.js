@@ -1,8 +1,11 @@
 // bowling.js
 export default class Game {
-    roll(){}
+    _score = 0;
+    roll(pins){
+        this._score += pins;
+    }
 
     score(){
-        return 0;
+        return this._score;
     }
 }
